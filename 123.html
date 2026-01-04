@@ -1,129 +1,128 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
+<!doctype html>
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T1 戰隊介紹</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #e60012;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        nav {
-            background-color: #333;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        section {
-            padding: 20px;
-        }
-        h2 {
-            color: #e60012;
-        }
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .content div {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            flex: 1 1 calc(33.333% - 40px);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Faker — 李相赫 (About)</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { 
+      margin: 0; 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans CJK TC', 'Microsoft JhengHei', Arial; 
+      background: linear-gradient(180deg,#eaf3fb,#dbe9f7); 
+      color: #13324a; 
+      overflow-x: hidden;
+    }
+    
+    .header { background-color: #f1f1f1; padding: 20px; text-align: center; }
+    .header h1 { margin: 0; font-size: 2.2rem; color: #274861; }
+
+    .nav { 
+      background-color: #1b2b3a; 
+      height: 50px; 
+      position: sticky; 
+      top: 0; 
+      z-index: 999; 
+      display: flex; 
+      align-items: center; 
+      padding: 0 12px;
+      transition: all 0.3s ease;
+    }
+    .nav a { 
+      color: #fff; 
+      text-decoration: none; 
+      padding: 8px 16px; 
+      display: inline-block; 
+      border-radius: 6px; 
+      margin-right: 6px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .nav a:hover { background: rgba(255,255,255,0.1); }
+    .nav a:active { transform: scale(0.9); }
+
+    .full-width-section {
+        width: 100%;
+        margin-bottom: 28px;
+        overflow: hidden;
+    }
+    
+    .full-width-section img {
+        width: 100%;
+        height: auto;
+        display: block;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .full-width-section img.appear {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .container { max-width: 1100px; margin: 28px auto; padding: 0 16px; }
+
+    .column { float: left; width: 50%; padding: 15px; min-height: 300px; }
+    @media screen and (max-width: 600px) { .column { width: 100%; } }
+
+    .card { 
+      background: rgba(255,255,255,0.85); 
+      border-radius: 12px; 
+      padding: 18px; 
+      box-shadow: 0 6px 18px rgba(20,40,60,0.08); 
+    }
+
+    .footer { clear: both; background-color: #f1f1f1; text-align: center; padding: 18px; margin-top: 22px; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+    .muted { color: #5c6d7a; font-size: 0.95rem; }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>T1 戰隊介紹</h1>
-</header>
+  <div class="header">
+    <h1>Faker — 李相赫 (이상혁)</h1>
+    <div class="muted">英雄聯盟職業選手 / T1 / 傳奇中路選手</div>
+  </div>
 
-<nav>
-    <a href="#about">關於我們</a>
-    <a href="#achievements">戰隊成就</a>
-    <a href="#players">主要選手</a>
-    <a href="#bestteam">最棒的五人</a>
-</nav>
+  <div class="nav" id="mainNav">
+    <a href="personal data.html">個人資料</a>
+    <a href="interesting.html">趣事</a>
+    <a href="Glorious deeds.html">榮耀事蹟</a>
+  </div>
 
-<section id="about">
-    <h2>關於 T1 lol戰隊</h2>
-    <p>T1 是一支來自韓國的知名電子競技戰隊，成立於 2003 年，前身為 SK Telecom T1，尤其在《英雄聯盟》（League of Legends, LoL）賽事中極具盛名。T1 在世界賽事上多次奪冠，並且憑藉其隊內的明星選手及戰術運用，成為全球電子競技迷心目中的傳奇戰隊之一。</p>
-</section>
+  <div class="full-width-section">
+    <img src="Faker_two.jpg" alt="Faker LCK 背景圖片" id="heroImg">
+  </div>
 
-<section id="achievements">
-    <h2>戰隊成就</h2>
-    <div class="content">
-        <div>
-            <h3>英雄聯盟</h3>
-            <p>4次世界冠軍 (2013,2015,2016,2023)</p>
-            <p>2次msi冠軍(2016,2017)<p>
-            <p>10次 LCK 冠軍</p>
-        </div>
-       
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      const nav = document.getElementById('mainNav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 20) {
+          nav.style.boxShadow = '0 4px 15px rgba(0,0,0,0.3)';
+          nav.style.backgroundColor = '#131e29'; 
+        } else {
+          nav.style.boxShadow = 'none';
+          nav.style.backgroundColor = '#1b2b3a';
+        }
+      });
 
-</section>
+      const heroImg = document.getElementById('heroImg');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('appear');
+          }
+        });
+      }, { threshold: 0.1 });
 
-<section id="players">
-    <h2>主要選手</h2>
-    <div class="content">
-        <div>
-            <h3>Faker</h3>
-            <p>中路，從2013開始打職業,英雄聯盟傳奇選手,獲得最多次(4)世界大賽冠軍,在職業生涯有過無數多的明場面,是lol最知名的選手。</p>
-        </div>
-        <div>
-            <h3>Gumayusi</h3>
-            <p>射手,2019在T1當練習生,2020首次在LCK(韓國職業聯賽)登場,表現穩定且出色,是大賽型選手,因為在比賽有很多次偷龍的名場面,有龍之子的稱號。</p>
-        </div>
-        <div>
-            <h3>Zeus</h3>
-            <p>上路,2019在T1當練習生,2022首次在LCK登場,有著優秀個人能力、操作以及打線,讓他成為世界最強上路的名單中。</p>
-        </div>
-        <div>
-            <h3>Oner</h3>
-            <p>T1 的打野選手,2020在T1當練習生,2021首次在LCK登場,節奏掌控優秀,強勢進攻野區的打法,也是大賽型選手,當表現亮眼時觀眾會稱他O神。</p>
-        </div>
-        <div>
-            <h3>Keria</h3>
-            <p>輔助,可以在輔助位置拿出各種類型的英雄,因在輔助位卻有著在其他路一樣超級優秀的操作,有著歷天怪(歷代級天才怪物)。</p>
-        </div>
-    </div>
-</section>
-<section id="bestteam">
-    <h2>最棒的五人</h2>
-    <p>這隊伍中的五人,從上路至輔助Zeus,Oner,Faker,Gumayusi,Keria簡稱ZOFGK,從2022年開始至今陣容沒有換過,在聯賽內只有2024夏季賽沒打進決賽,在MSI表現最低第三名,世界賽2022以及2023獲得亞軍及冠軍,有者優異的成績以及選手魅力,讓這陣容收穫大量的粉絲。 </p>
-</section>
-
-<footer>
-    <p>&copy; 2024 T1 Esports. All rights reserved.</p>
-</footer>
+      if (heroImg) {
+        observer.observe(heroImg);
+      }
+      console.log("%cAll Roads Lead to Me.", "color: #C19A6B; font-size: 20px; font-weight: bold; text-shadow: 2px 2px 4px #000;");
+      console.log("網頁動態行為加載完成！");
+    });
+  </script>
 
 </body>
 </html>

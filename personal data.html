@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>Faker (李相赫) 的個人簡介</title>
+<style>
+    body {
+        margin: 0;
+        font-family: "Microsoft JhengHei", sans-serif;
+        display: flex;
+        height: 100vh;
+    }
+
+    .left {
+        width: 30%;
+        background-color: #d3d3d3;
+        text-align: center;
+        padding-top: 40px;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+
+    .left img {
+        width: 50%;
+        border-radius: 10px;
+        margin-top: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .right {
+        width: 70%;
+        background-color: #f5f5f5;
+        padding: 40px;
+        overflow-y: auto;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.6em;
+        color: #444;
+    }
+
+    .link-item {
+        transition: background-color 0.3s ease;
+        border-radius: 5px;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 1.2em;
+        color: #0066cc;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #003399;
+    }
+</style>
+</head>
+<body>
+    <div class="left">
+        <h1>個人照片</h1>
+        <img src="Faker_one.jpg" alt="英雄聯盟職業選手 Faker 的照片">
+        <div class="link-item">
+            <p><strong>Instagram：</strong><a href="https://reurl.cc/R90bRg" target="_blank" style="font-size:inherit;">https://reurl.cc/R90bRg</a></p>
+        </div>
+        <div class="link-item">
+            <p><strong>Youtube：</strong><a href="https://reurl.cc/YkOjml" target="_blank" style="font-size:inherit;">https://reurl.cc/LQb75K</a></p>
+        </div>
+        <div class="link-item">
+            <p><strong>實況平台:</strong><a href="https://reurl.cc/W83Xby" target="_blank" style="font-size:inherit;">https://reurl.cc/W83Xby</a></p>
+        </div>
+    </div>
+
+    <div class="right">
+        <h1>個人資料</h1>
+        <p><strong>姓名：</strong>李相赫(이상혁 / Lee Sang-Hyeok)</p>
+        <p><strong>出生：</strong>1996年5月7日(29歲)韓國首爾</p>
+        <p><strong>出道年代：</strong>2013年至今</p>
+        <p><strong>英雄聯盟遊戲ID：</strong>Hide on bush</p>
+        <p><strong>隊伍/位置：</strong>T1 戰隊(前身為SK Telecom T1)/中路選手(Mid Laner)</p>
+        <p><strong>簡介：</strong>為《英雄聯盟》最知名的職業選手(Goat)。他出道至今均效力於T1戰隊，六度奪得世界冠軍、兩度奪得季中邀請賽冠軍、十度奪得韓國冠軍聯賽冠軍、一次亞洲洲際賽冠軍和一個全明星賽冠軍（季中賽前身），為首位完成英雄聯盟大滿貫的選手。</p>
+        <p><strong>早年經歷：</strong>從小熱衷拼圖及電子遊戲，如《魔獸爭霸III》中的自訂地圖以及DOTA四大遊戲分支的《渾沌Online》。2011年底，他開始玩《英雄聯盟》，並且很快地就成為了高手，以「고전파」（古典派）名稱登上韓國伺服器單人排位第一並以沒有固定英雄池為玩家認知，受到職業隊伍青睞。2013年2月選擇加入SK Telecom T1戰隊。</p>
+        <p><strong>如何成名：</strong>他靠著出道賽就單殺頂級中路、經典的「雙劫」極限反殺操作，以及同年拿下世界冠軍(S3)，迅速成為全球知名的《英雄聯盟》傳奇選手。<a href="https://www.youtube.com/watch?v=ZPCfoCVCx3U" target="_blank" style="font-size:inherit;">影片連結</a> </p>
+    </div>
+
+    <script>
+        const profileImg = document.querySelector('.left img');
+        profileImg.addEventListener('mouseenter', () => {
+            profileImg.style.transform = "scale(1.1) rotate(2deg)";
+            profileImg.style.boxShadow = "0 10px 30px rgba(0,0,0,0.3)";
+        });
+        profileImg.addEventListener('mouseleave', () => {
+            profileImg.style.transform = "scale(1) rotate(0deg)";
+            profileImg.style.boxShadow = "none";
+        });
+
+        const paragraphs = document.querySelectorAll('.right p');
+        window.addEventListener('DOMContentLoaded', () => {
+            paragraphs.forEach((p, index) => {
+                p.style.opacity = "0";
+                p.style.transform = "translateY(20px)";
+                p.style.transition = "all 0.6s ease-out";
+                
+                setTimeout(() => {
+                    p.style.opacity = "1";
+                    p.style.transform = "translateY(0)";
+                }, 150 * index);
+            });
+        });
+
+        const linkItems = document.querySelectorAll('.link-item');
+        linkItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.backgroundColor = "#c0c0c0";
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.backgroundColor = "transparent";
+            });
+        });
+    </script>
+</body>
+</html>
